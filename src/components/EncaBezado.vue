@@ -40,18 +40,13 @@ export default {
             <li><router-link to="/computadores">Computadores</router-link></li>
             <li><router-link to="/videojuegos">Video Juegos</router-link></li>
             <li><router-link to="/laptops">Laptops</router-link></li>
-            <li><router-link to="/impresoras">Impresoras y Proyectores</router-link></li>
+            <li><router-link to="/impresoras">Impresoras</router-link></li>
           </ul>
         </li>
         <li><router-link to="/contacto">Contacto</router-link></li>
         <li><router-link to="/pqr">PQR</router-link></li>
-
-        <!-- 🔽 Aquí el nuevo li del carrito -->
-        <li>
-          <router-link to="/carrito" class="cart-link">
-            <i class="fa-solid fa-cart-shopping"></i> Mi Carrito
-          </router-link>
-        </li>
+        <li><router-link to="/pqr">carrito</router-link></li>
+        
       </ul>
     </nav>
   </header>
