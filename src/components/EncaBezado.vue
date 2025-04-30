@@ -46,7 +46,7 @@ export default {
         </li>
         <li><router-link to="/contacto">Contacto</router-link></li>
         <li><router-link to="/pqr">PQR</router-link></li>
-        <li><router-link to="/pqr">carrito</router-link></li>
+        <li><router-link to="/VistaCarrito">carrito</router-link></li>
         
       </ul>
     </nav>
