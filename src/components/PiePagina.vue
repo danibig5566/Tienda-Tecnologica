@@ -1,145 +1,127 @@
-<script>
-export default{
-name:'PiePagina',
-}
-</script>
-
 <template>
   <footer class="footer">
+ 
+    <div class="top-bar">
+      <span>Conéctate con nosotros en las redes sociales:</span>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+   
     <div class="footer-container">
       <div class="footer-section">
-        <h3>Conéctate con nosotros en las redes sociales:</h3>
-        <div class="social-links">
-          <a href="#" target="_blank">Facebook</a>
-          <a href="#" target="_blank">Twitter</a>
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">LinkedIn</a>
-        </div>
+        <h3>💎 TIENDA TECNOLOGICA</h3>
+        <p>
+          ¡Explora las últimas tendencias en tecnología! Encuentra los gadgets más innovadores, computadoras de última generación y accesorios imprescindibles.
+          ¡La tecnología del mañana, hoy! 🌟 <br>
+          <span>#Innovación #Tecnología #Futuro</span>
+        </p>
       </div>
 
       <div class="footer-section">
-        <h3>Tienda Tecnológica</h3>
-        <p>¡Explora las últimas tendencias en tecnología! Encuentra los gadgets más innovadores, computadoras de última generación y accesorios imprescindibles. ¡La tecnología del mañana, hoy! 🌟</p>
-        <p>#Innovación #Tecnología #Futuro</p>
+        <h3>PRODUCTOS</h3>
+        <p><a href="#">Impresoras</a></p>
+        <p><a href="#">Video Juegos</a></p>
+        <p><a href="#">Consolas</a></p>
+        <p><a href="#">Celulares</a></p>
+        <p><a href="#">Computadores</a></p>
+        <p><a href="#">Laptos</a></p>
       </div>
 
       <div class="footer-section">
-        <h3>Productos</h3>
-        <ul>
-          <p>
-              <a href="impresoras.html" class="text-reset">Impresoras</a>
-            </p>
-            <p>
-              <a href="video_juegos.html" class="text-reset">Video Juegos</a>
-            </p>
-            <p>
-              <a href="consolasAccesorios.html" class="text-reset">Consolas</a>
-            </p>
-            <p>
-              <a href="celulares.html" class="text-reset">Celulares</a>
-            </p>
-            <p>
-              <a href="computadores.html" class="text-reset">Computadores</a>
-            </p>
-            <p>
-              <a href="laptos.html" class="text-reset">Laptos</a>
-            </p>
-        </ul>
+        <h3>ENLACES UTILES</h3>
+        <p><a href="#">PQR</a></p>
+        <p><a href="#">Contactame</a></p>
+        <p><a href="#">Sobre Nosotros</a></p>
       </div>
 
       <div class="footer-section">
-        <h3>Enlaces útiles</h3>
-        <ul>
-          <li><a href="#">PQR</a></li>
-          <li><a href="#">Contáctame</a></li>
-          <li><a href="#">Sobre Nosotros</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contacto</h3>
-        <p>Santa Marta, Magdalena, Colombia</p>
-        <p>angeldanielgonzalezvillazon@gmail.com</p>
-        <p>+57 3192281342</p>
+        <h3>CONTACTO</h3>
+        <p><i class="fas fa-home"></i> Santa Marta , Magdalena, Colombia</p>
+        <p><i class="fas fa-envelope"></i> CuentaconNosotros@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +57 312345678</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Copyright: Tienda Tecnológica</p>
+      <p>&copy; 2025 Copyright: <strong>Tienda tecnologica</strong></p>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'PiePagina',
+}
+</script>
+
 <style scoped>
 .footer {
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 40px 0;
+  background-color: #000000;
+  color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
-.footer-container {
+
+.top-bar {
+  background-color: #574747;
   display: flex;
   justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 0.95em;
+  border-top: 4px solid rgb(255, 255, 255);
+}
+
+.social-icons a {
+  margin-left: 15px;
+  color: #ff0202;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.social-icons a:hover {
+  color: rgb(30, 255, 0);
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
+  padding: 3px 3px;
+  background-color: #000000;
 }
 
 .footer-section {
-  width: 20%;
-  margin-bottom: 20px;
+  flex: 1;
+  margin: 10px 20px;
+  min-width: 200px;
 }
 
 .footer-section h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-.footer-section p {
-  font-size: 0.9em;
- 
-}
-
-.social-links a {
-  margin-right: 5px;
-  color: #fff;
+.footer-section a {
   text-decoration: none;
+  color: #ffffff;
 }
 
-.social-links a:hover {
-  color: #3498db;
-}
-
-ul {
-  padding-left: 0;
-}
-
-ul li {
-  list-style: none;
-  margin: 5px 0;
-}
-
-ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  color: #3498db;
+.footer-section a:hover {
+  color: rgb(30, 255, 0);
 }
 
 .footer-bottom {
+  background-color: #000000;
   text-align: center;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-section {
-    width: 100%;
-    text-align: center;
-  }
+  padding: 15px 0;
+  font-size: 0.9em;
 }
 </style>

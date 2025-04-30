@@ -167,7 +167,7 @@ export default {
             <div class="precio">
               <p>{{ formatPrecio(producto.precio) }}</p>
             </div>
-            <button class="agregar-carrito" @click="agregarAlCarrito(producto)">Comprar</button>
+            <button class="agregar-carrito" @click="agregarAlCarrito(producto)">agregar al carrito</button>
           </div>
         </div>
       </div>

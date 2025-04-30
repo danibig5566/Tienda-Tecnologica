@@ -35,6 +35,7 @@ export default {
         <li class="item">
           Productos
           <ul class="sub-item">
+            
             <li><router-link to="/consolas">Consolas y Accesorios</router-link></li>
             <li><router-link to="/vistacelulares">Celulares</router-link></li>
             <li><router-link to="/computadores">Computadores</router-link></li>
@@ -55,12 +56,12 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #3f6597;
+  background-color: #000000;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #000000;
+  color: #ffffff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -90,7 +91,7 @@ export default {
 }
 
 .menu ul li a, .menu ul li router-link {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -105,14 +106,15 @@ export default {
 .item {
   position: relative;
   cursor: pointer;
+  font-size: medium;
 }
 
 .sub-item {
   position: absolute;
   top: 100%; 
-  left: 50%; 
+ 
   transform: translateX(-50%); 
-  background: #ffffff;
+  background: #272727;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -134,7 +136,7 @@ export default {
 }
 
 .sub-item li a {
-  color: #000000;
+  color: #ffffff;
   font-size: 0.95rem;
   display: block;
   padding: 5px 0;
@@ -149,11 +151,7 @@ export default {
   position: relative;
 }
 
-#carrito {
-  cursor: pointer;
-  font-size: 1.5rem;
-  position: relative;
-}
+
 
 .fa-cart-shopping {
   font-size: 2rem;
@@ -186,46 +184,5 @@ export default {
 .lista_de_productos {
   max-height: 200px;
   overflow-y: auto;
-}
-
-.total-carrito {
-  margin: 15px 0;
-  text-align: right;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.vaciar-btn {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: #f5f5f5;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
-}
-
-.vaciar-btn:hover {
-  background-color: #e0e0e0;
-}
-
-.ver-carrito-btn {
-  display: block;
-  width: 40%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #ffe699;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.ver-carrito-btn:hover {
-  background-color: #7ebfcf;
 }
 </style>
