@@ -55,22 +55,40 @@ export default {
         }
       ],
       carrito: []
+    
+
     };
+  
   },
   methods: {
+    limpiarPrecio(precioStr) {
+  // Elimina símbolo $ y puntos, y convierte a número
+  return parseFloat(precioStr.replace('$', '').replace(/\./g, '').replace(',', '.'));
+},
     añadirAlCarrito(producto) {
-      const productoExistente = this.carrito.find(p => p.id === producto.id);
+  let carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+  const existente = carrito.find(p => p.id === producto.id);
 
-      if (productoExistente) {
-        productoExistente.cantidad++;
-      } else {
-        this.carrito.push({ ...producto, cantidad: 1 });
-      }
+  if (existente) {
+    existente.cantidad += 1;
+  } else {
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      imagenUrl: producto.imagen,
+      descripcion: producto.descripcion,
+      precio: this.limpiarPrecio(producto.precio),
+      cantidad: 1
+    });
+  }
 
-      console.log('Carrito actualizado:', this.carrito);
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  alert('Producto añadido al carrito');
+},
+
     }
   }
-};
+
 </script>
 <style scoped>
 .contenedor-cartas {
