@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj": {}
+    "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj": {
+    "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj",
         "projectName": "TiendaBackendApi",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj",
+        "projectPath": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\TiendaBackendApi\\TiendaBackendApi\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,11 +46,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
+            "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",

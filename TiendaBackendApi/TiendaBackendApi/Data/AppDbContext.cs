@@ -9,5 +9,6 @@ namespace TiendaBackendApi.Data
         public AppDbContext(DbContextOptions<AppDbContext>options) : base(options) {}
 
         public DbSet<Product>Productos { get; set; }
+        public DbSet<Categoria>Categorias { get; set; }
     }
 }
