@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "TiendaBackendApi/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.4",
           "Swashbuckle.AspNetCore": "6.6.2"

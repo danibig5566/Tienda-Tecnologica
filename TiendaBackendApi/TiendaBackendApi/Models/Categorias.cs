@@ -1,16 +1,19 @@
 
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TiendaBackendApi.Models
 {
-    public class Categoria
+   
+    public class Categorias
     {
-        [key]
+      
         public int Id { get; set; }
+        
         public string Nombre { get; set; }
 
-        // Relación inversa
-        public List<Product> Productos { get; set; }
+        public List<Product>? Productos { get; set; } = new();
+
     }
 }
