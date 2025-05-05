@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using TiendaBackendApi.Data;
 using TiendaBackendApi.Models;
+using AutoMapper;
+
 
 namespace TiendaBackendApi.Controllers
 {
@@ -11,39 +13,52 @@ namespace TiendaBackendApi.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly AppDbContext _context;
-        public ProductsController(AppDbContext context)
+        private readonly IMapper _mapper;
+
+        public ProductsController(AppDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
+        
+      
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductos()
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProductos()
         {
-            return await _context.Productos.ToListAsync();
+            var productos = await _context.Productos.Include(p => p.Categorias).ToListAsync();
+            var productosDTO = _mapper.Map<IEnumerable<ProductDTO>>(productos);
+            return Ok(productosDTO);
         }
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<Product>> GetProducto(int id)
+        public async Task<ActionResult<ProductDTO>> GetProducto(int id)
         {
-            var producto = await _context.Productos.FindAsync(id);
+            var producto = await _context.Productos.Include(p => p.Categorias).FirstOrDefaultAsync(p => p.Id == id);
             if (producto == null)
                 return NotFound();
-            return producto;
-        }
-        [HttpPost]
-        public async Task<ActionResult<Product>> PostProducto(Product producto)
-        {
-            
-            var categoria = await _context.Categorias.FindAsync(producto.CategoriasId);
 
+            var productoDTO = _mapper.Map<ProductDTO>(producto);
+            return Ok(productoDTO);
+        }
+
+        [HttpPost]
+
+        public async Task<ActionResult<ProductDTO>> PostProducto(Product producto)
+        {
+            var categoria = await _context.Categorias.FindAsync(producto.CategoriasId);
             if (categoria == null)
                 return BadRequest(new { message = "La categoría especificada no existe" });
 
-        
+            producto.CategoriaNombre = categoria.Nombre;
 
             _context.Productos.Add(producto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProducto), new { id = producto.Id }, producto);
+            var productDTO = _mapper.Map<ProductDTO>(producto);
+            return CreatedAtAction(nameof(GetProducto), new { id = producto.Id }, productDTO);
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProducto(int id, Product producto)
@@ -55,6 +70,7 @@ namespace TiendaBackendApi.Controllers
             if (categoria == null)
                 return BadRequest(new { message = "La categoría especificada no existe" });
 
+            producto.CategoriaNombre = categoria.Nombre;
             producto.Categorias = categoria;
 
             _context.Entry(producto).State = EntityState.Modified;
@@ -71,6 +87,7 @@ namespace TiendaBackendApi.Controllers
             }
             return NoContent();
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProducto(int id)
         {
@@ -82,4 +99,5 @@ namespace TiendaBackendApi.Controllers
             return NoContent();
         }
     }
+
 }

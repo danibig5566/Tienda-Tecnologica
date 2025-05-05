@@ -167,3 +167,4 @@ C:\Users\HP\Tienda-Tecnologica\TiendaBackendApi\TiendaBackendApi\obj\Debug\net8.
 C:\Users\HP\Tienda-Tecnologica\TiendaBackendApi\TiendaBackendApi\obj\Debug\net8.0\TiendaBackendApi.pdb
 C:\Users\HP\Tienda-Tecnologica\TiendaBackendApi\TiendaBackendApi\obj\Debug\net8.0\TiendaBackendApi.genruntimeconfig.cache
 C:\Users\HP\Tienda-Tecnologica\TiendaBackendApi\TiendaBackendApi\obj\Debug\net8.0\ref\TiendaBackendApi.dll
+C:\Users\HP\Tienda-Tecnologica\TiendaBackendApi\TiendaBackendApi\bin\Debug\net8.0\AutoMapper.dll
