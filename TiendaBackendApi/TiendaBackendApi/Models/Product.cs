@@ -24,7 +24,7 @@ namespace TiendaBackendApi.Models
         [Required]
         public int CategoriasId { get; set; }
 
-
+        [ForeignKey("CategoriasId")]
         public Categorias Categorias { get; set; }
     }
 }

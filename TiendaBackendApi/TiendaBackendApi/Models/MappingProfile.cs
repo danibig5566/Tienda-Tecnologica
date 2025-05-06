@@ -14,8 +14,8 @@ using System.ComponentModel.DataAnnotations.Schema;
         public MappingProfile()
         {
 
-            CreateMap<Product, ProductDTO>()
-         .ForMember(dest => dest.CategoriaNombre, opt => opt.MapFrom(src => src.Categorias.Nombre));
+          CreateMap<Product, ProductDTO>();
+         
         }
     }
 
