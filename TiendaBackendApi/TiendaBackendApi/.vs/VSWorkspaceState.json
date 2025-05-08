@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers",
-    "\\Models",
-    "\\obj"
+    "\\bin\\Release\\net8.0"
   ],
-  "SelectedNode": "\\Controllers\\ProductsController.cs",
+  "SelectedNode": "\\Models",
   "PreviewInSolutionExplorer": false
 }

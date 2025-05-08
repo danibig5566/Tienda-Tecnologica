@@ -10,5 +10,5 @@ public class Categorias
     [Required]
     public string Nombre { get; set; }
 
-    public List<Product> Productos { get; set; } 
+    public ICollection<Product> Productos { get; set; }
 }

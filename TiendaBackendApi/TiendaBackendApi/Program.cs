@@ -29,7 +29,17 @@ namespace TiendaBackendApi
 
             builder.Services.AddDbContext<AppDbContext>(options =>
                   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("DevPolicy",
+                    builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
 
+           
+            
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
@@ -50,6 +60,7 @@ namespace TiendaBackendApi
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
+            app.UseCors("DevPolicy");
 
             app.Run();
         }

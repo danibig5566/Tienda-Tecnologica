@@ -7,8 +7,32 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\WeatherForecastController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\CategoriaDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\CategoriaDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\ProductDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ProductDTO.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\MappingProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\MappingProfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Categorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,8 +54,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T07:48:39.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Models\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\MappingProfile.cs",
+              "RelativeToolTip": "Models\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T06:37:20.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\CategoriaDTO.cs",
+              "RelativeDocumentMoniker": "Models\\CategoriaDTO.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\CategoriaDTO.cs",
+              "RelativeToolTip": "Models\\CategoriaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T06:31:18.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Models\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\ProductDTO.cs",
+              "RelativeToolTip": "Models\\ProductDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T06:29:31.818Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,14 +116,40 @@
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAADEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T15:23:40.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Categorias.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs",
+              "RelativeDocumentMoniker": "Models\\Categorias.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs",
+              "RelativeToolTip": "Models\\Categorias.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T13:13:45.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T13:15:48.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -68,46 +162,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Categorias.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs",
-              "RelativeDocumentMoniker": "Models\\Categorias.cs",
-              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Categorias.cs",
-              "RelativeToolTip": "Models\\Categorias.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:13:45.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T13:07:23.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAACwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T16:43:42.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-02T13:07:23.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -115,21 +196,7 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-02T22:29:40.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:15:48.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T22:29:40.266Z"
             }
           ]
         }
