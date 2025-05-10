@@ -14,8 +14,9 @@ using System.ComponentModel.DataAnnotations.Schema;
         public MappingProfile()
         {
 
-          CreateMap<Product, ProductDTO>();
-         
+            CreateMap<Product, ProductDTO>();
+
         }
     }
+
 

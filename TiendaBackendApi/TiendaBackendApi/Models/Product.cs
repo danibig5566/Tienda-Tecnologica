@@ -2,10 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using TiendaBackendApi.Data;
 using AutoMapper;
+using TiendaBackendApi.Models;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace TiendaBackendApi.Models
-{
+
     public class Product
     {
         [Key]
@@ -26,5 +26,8 @@ namespace TiendaBackendApi.Models
 
         [ForeignKey("CategoriasId")]
         public Categorias Categorias { get; set; }
+
+        public ICollection<Compra> Compras { get; set; }
     }
-}
+
+

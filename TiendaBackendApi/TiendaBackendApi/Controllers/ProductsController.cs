@@ -39,21 +39,7 @@ namespace TiendaBackendApi.Controllers
 
             return CreatedAtAction(nameof(GetProductos), new { id = producto.Id }, producto);
         }
-        [HttpGet("categoria/{nombreCategoria}")]
-        public async Task<ActionResult<IEnumerable<Product>>> GetProductosPorCategoria(string nombreCategoria)
-        {
-            var productos = await _context.Productos
-                .Include(p => p.Categorias)
-                .Where(p => p.Categorias.Nombre.ToLower() == nombreCategoria.ToLower())
-                .ToListAsync();
-
-            if (productos == null || productos.Count == 0)
-            {
-                return NotFound($"No se encontraron productos para la categoría: {nombreCategoria}");
-            }
-
-            return Ok(productos);
-        }
+       
 
 
         [HttpGet]
