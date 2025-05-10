@@ -18,7 +18,7 @@ namespace TiendaBackendApi.Controllers
            
             _context = context;
             _mapper = mapper;
-            Console.WriteLine("UsuariosController cargado");
+           
         }
 
         [HttpPost]
