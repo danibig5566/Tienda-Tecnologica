@@ -45,6 +45,11 @@ export default {
       <i class="fas fa-user-cog"></i>
     </router-link>
   </li>
+   <li>
+    <router-link to="/VistaUsers" title="USERS">
+      <i class="fas fa-user-cog"></i>
+    </router-link>
+  </li>
 </ul>
 
     </nav>

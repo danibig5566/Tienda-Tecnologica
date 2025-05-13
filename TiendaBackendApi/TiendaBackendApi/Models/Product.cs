@@ -27,7 +27,7 @@ using System.ComponentModel.DataAnnotations.Schema;
         [ForeignKey("CategoriasId")]
         public Categorias Categorias { get; set; }
 
-        public ICollection<Compra> Compras { get; set; }
+       
     }
 
 

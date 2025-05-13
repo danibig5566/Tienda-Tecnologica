@@ -102,6 +102,7 @@ export default {
         this.resetFormulario();
         this.cargarProductos();
       } catch (error) {
+        alert('error al agregar producto verifique los campos correctamente');
         console.error('error al agregar producto', error)
       }
     },

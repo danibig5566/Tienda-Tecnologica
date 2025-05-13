@@ -20,16 +20,37 @@ namespace TiendaBackendApi.Controllers
             _mapper = mapper;
            
         }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
+        {
+            var usuarios = await _context.Usuarios.ToListAsync();
+            return Ok(usuarios);
+        }
+
+       
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        {
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
+                return NotFound();
+
+            return Ok(usuario);
+        }
 
         [HttpPost]
         public async Task<ActionResult<Usuario>> CrearUsuario([FromBody] UsuarioDTO dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var usuario = new Usuario
             {
                 Nombre = dto.Nombre,
                 Correo = dto.Correo,
                 Telefono = dto.Telefono,
-                Direccion = dto.Direccion
+                Direccion = dto.Direccion,
+                Contraseña = dto.Contraseña
             };
 
             _context.Usuarios.Add(usuario);
@@ -38,23 +59,35 @@ namespace TiendaBackendApi.Controllers
             return CreatedAtAction(nameof(GetUsuario), new { id = usuario.Id }, usuario);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+       
+        [HttpPut("{id}")]
+        public async Task<IActionResult> ActualizarUsuario(int id, [FromBody] UsuarioDTO dto)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
             if (usuario == null)
                 return NotFound();
-            return Ok(usuario);
+
+            usuario.Nombre = dto.Nombre;
+            usuario.Correo = dto.Correo;
+            usuario.Telefono = dto.Telefono;
+            usuario.Direccion = dto.Direccion;
+            usuario.Contraseña = dto.Contraseña;
+
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
 
+       
         [HttpDelete("{id}")]
-        public async Task<IActionResult> EliminarProducto(int id)
+        public async Task<IActionResult> EliminarUsuario(int id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null) return NotFound();
+            if (usuario == null)
+                return NotFound();
 
-            _context.Productos.Remove(usuario);
+            _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
 
