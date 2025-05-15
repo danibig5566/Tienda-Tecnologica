@@ -1,18 +1,19 @@
 <script>
-import BodysUsers from '../components/BodysUsers.vue';
 import Encabezado from '../components/Encabezado.vue';
+import LoginUsers from '../components/LoginUsers.vue';
 import PiePagina from '../components/PiePagina.vue';
+
 
 export default {
     name: 'VistaUsers',
     components: {
-        Encabezado, PiePagina, BodysUsers
+        Encabezado, PiePagina, LoginUsers
     }
 }
 </script>
 <template>
     <Encabezado></Encabezado>
-    <BodysUsers></BodysUsers>
+    <LoginUsers></LoginUsers>
     <PiePagina></PiePagina>
 </template>
 
