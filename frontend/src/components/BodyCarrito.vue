@@ -1,19 +1,19 @@
 <template>
   <div class="carrito-container">
     <h1 class="titulo">🛒 Carrito de Compras</h1>
+    <!-- Mostrar usuario logueado y botón de cerrar sesión -->
+<div v-if="usuario" class="usuario-sesion">
+  <p>👤 Sesión iniciada como: <strong>{{ usuario.nombre }}</strong></p>
+  <button class="btn btn-logout" @click="cerrarSesion">Cerrar sesión</button>
+</div>
 
     <div v-if="carrito.length > 0">
       <form class="formulario-carrito">
-        <div
-          v-for="item in carrito"
-          :key="item.id"
-          class="item-carrito"
-        >
+        <div v-for="item in carrito" :key="item.id" class="item-carrito">
           <img :src="item.imagenUrl" alt="producto" class="imagen-producto" />
           <div class="detalle-producto">
             <h2>{{ item.nombre }}</h2>
             <p>Precio: ${{ item.precio.toFixed(2) }}</p>
-
             <label>Cantidad:</label>
             <input
               type="number"
@@ -40,54 +40,130 @@
     <div v-else class="carrito-vacio">
       <p>Tu carrito está vacío.</p>
     </div>
+
+    <!-- MODAL DE LOGIN -->
+    <div v-if="showLoginModal" class="modal-overlay">
+      <div class="modal">
+        <h3>Iniciar Sesión</h3>
+        <input v-model="nombreUsuario" placeholder="Nombre de usuario" />
+        <input v-model="contrasena" type="password" placeholder="Contraseña" />
+        <button @click="login">Iniciar sesión</button>
+        <button @click="showLoginModal = false">Cancelar</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'BodyCarrito',
-  data() {
-    return {
-      carrito: JSON.parse(localStorage.getItem('carrito') || '[]'),
-    };
+ data() {
+  return {
+    carrito: JSON.parse(localStorage.getItem('carrito') || '[]'),
+    showLoginModal: false,
+    nombreUsuario: '',
+    contrasena: '',
+    usuario: JSON.parse(localStorage.getItem('usuario') || 'null')
+  };
+},
+methods: {
+  guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
   },
-  computed: {
-    total() {
-      return this.carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0).toFixed(2);
-    }
+  vaciarCarrito() {
+    localStorage.removeItem('carrito');
+    this.carrito = [];
   },
-  methods: {
-    guardarCarrito() {
-      localStorage.setItem('carrito', JSON.stringify(this.carrito));
-    },
-    vaciarCarrito() {
-      localStorage.removeItem('carrito');
-      this.carrito = [];
-    },
-    comprar() {
+  async comprar() {
+    if (!this.usuario) {
+      this.showLoginModal = true;
+    } else {
       alert('¡Gracias por tu compra!');
       this.vaciarCarrito();
     }
+  },
+  async login() {
+    if (this.usuario) {
+      alert("Ya hay una sesión activa.");
+      return;
+    }
+
+    try {
+      const response = await axios.get('http://localhost:5041/api/usuarios');
+      const usuarios = response.data;
+
+      const usuarioEncontrado = usuarios.find(user =>
+        user.nombre === this.nombreUsuario &&
+        user.contraseña === this.contrasena
+      );
+
+      if (usuarioEncontrado) {
+        localStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
+        this.usuario = usuarioEncontrado;
+        this.showLoginModal = false;
+        alert("Autenticación exitosa. Continuando con la compra...");
+        this.comprar();
+      } else {
+        alert("Credenciales incorrectas.");
+      }
+    } catch (error) {
+      console.error("Error al autenticar:", error);
+      alert("Error al conectar con el servidor.");
+    }
+  },
+  cerrarSesion() {
+    localStorage.removeItem('usuario');
+    this.usuario = null;
+    alert("Sesión cerrada correctamente.");
   }
+}
+
 };
 </script>
-
 <style scoped>
 .carrito-container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .titulo {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.usuario-sesion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #ecf0f1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.btn-logout {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #c0392b;
 }
 
 .formulario-carrito {
@@ -96,19 +172,19 @@ export default {
 
 .item-carrito {
   display: flex;
-  align-items: flex-start;
   gap: 20px;
-  border-bottom: 1px solid #eee;
+  align-items: flex-start;
   padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .imagen-producto {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
 }
 
 .detalle-producto {
@@ -117,79 +193,154 @@ export default {
 
 .detalle-producto h2 {
   font-size: 1.1rem;
-  margin-bottom: 5px;
-  color: #222;
+  margin-bottom: 6px;
+  color: #2c3e50;
 }
 
 .detalle-producto p {
-  font-size: 0.95rem;
-  color: #666;
   margin-bottom: 6px;
+  color: #555;
+}
+
+.detalle-producto label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 4px;
 }
 
 .detalle-producto input[type='number'] {
   width: 60px;
-  padding: 6px;
+  padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 0.9rem;
 }
 
 .subtotal {
-  min-width: 150px;
-  text-align: right;
-  padding-top: 8px;
   font-weight: 600;
-  color: #444;
+  font-size: 1rem;
+  color: #2c3e50;
+  min-width: 160px;
+  text-align: right;
+  padding-top: 10px;
 }
 
 .acciones-carrito {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
 }
 
 .total {
-  font-size: 1.3rem;
-  color: #000;
+  font-size: 1.4rem;
+  color: #27ae60;
 }
 
 .botones-carrito {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .btn {
-  padding: 10px 18px;
+  padding: 10px 20px;
   font-size: 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   color: #fff;
   transition: background-color 0.3s ease;
 }
 
 .btn-rojo {
-  background-color: #e53935;
+  background-color: #e74c3c;
 }
 
 .btn-rojo:hover {
-  background-color: #c62828;
+  background-color: #c0392b;
 }
 
 .btn-verde {
-  background-color: #43a047;
+  background-color: #2ecc71;
 }
 
 .btn-verde:hover {
-  background-color: #388e3c;
+  background-color: #27ae60;
 }
 
 .carrito-vacio {
   text-align: center;
+  padding: 50px 0;
+  font-size: 1.2rem;
   color: #888;
-  font-size: 1.1rem;
-  padding: 40px 0;
 }
+
+/* Modal Estilos */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.modal input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:first-of-type {
+  background-color: #3498db;
+  color: white;
+}
+
+.modal button:first-of-type:hover {
+  background-color: #2980b9;
+}
+
+.modal button:last-of-type {
+  background-color: #bdc3c7;
+  color: white;
+}
+
+.modal button:last-of-type:hover {
+  background-color: #95a5a6;
+}
+
 </style>
