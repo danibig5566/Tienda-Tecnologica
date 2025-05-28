@@ -1,6 +1,12 @@
 <template>
   <div class="form-container">
-    <h2 class="form-title">rellene los campos para registrarse</h2>
+    <!-- ALERTA DINÁMICA -->
+    <div v-if="mostrarMensaje" :class="['alerta', tipoMensaje]">
+      <span v-if="tipoMensaje === 'loading'" class="spinner-alert"></span>
+      {{ mensaje }}
+    </div>
+
+    <h2 class="form-title">Rellene los campos para registrarse</h2>
 
     <form @submit.prevent="guardarUsuario" class="form">
       <div class="form-group">
@@ -10,28 +16,31 @@
 
       <div class="form-group">
         <label for="correo">Correo electrónico</label>
-        <input v-model="usuario.correo" type="email" id="correo" placeholder="correo" required />
+        <input v-model="usuario.correo" type="email" id="correo" placeholder="Correo" required />
       </div>
 
       <div class="form-group">
         <label for="telefono">Teléfono</label>
-        <input v-model="usuario.telefono" type="text" id="telefono" placeholder="telefono" required />
+        <input v-model="usuario.telefono" type="text" id="telefono" placeholder="Teléfono" required />
       </div>
 
       <div class="form-group">
         <label for="direccion">Dirección</label>
-        <input v-model="usuario.direccion" type="text" id="direccion" placeholder="direccion" required />
-      </div>
-       <div class="form-group">
-        <label for="contraseña">Contraseña</label>
-        <input v-model="usuario.contraseña" type="password" id="contraseña" placeholder="contraseña" required />
+        <input v-model="usuario.direccion" type="text" id="direccion" placeholder="Dirección" required />
       </div>
 
-      <button type="submit" class="btn-submit">registrar</button>
+      <div class="form-group">
+        <label for="contraseña">Contraseña</label>
+        <input v-model="usuario.contraseña" type="password" id="contraseña" placeholder="Contraseña" required />
+      </div>
+
+      <button type="submit" class="btn-submit" :disabled="cargando">
+        <span v-if="cargando" class="spinner"></span>
+        <span v-else>Registrar</span>
+      </button>
     </form>
   </div>
 </template>
-
 
 <script>
 import axios from 'axios'
@@ -48,19 +57,37 @@ export default {
         telefono: '',
         direccion: '',
         contraseña: ''
-      }
+      },
+      cargando: false,
+      mensaje: '',
+      tipoMensaje: '',
+      mostrarMensaje: false
     }
   },
   methods: {
     async cargarUsuarios() {
       try {
-        const res = await axios.get('http://localhost:5041/api/usuarios') 
+        const res = await axios.get('http://localhost:5041/api/usuarios')
         this.usuarios = res.data
       } catch (error) {
         console.error('Error al obtener usuarios:', error)
       }
     },
+
+    mostrarAlerta(texto, tipo) {
+      this.mensaje = texto;
+      this.tipoMensaje = tipo;
+      this.mostrarMensaje = true;
+      if (tipo !== 'loading') {
+        setTimeout(() => {
+          this.mostrarMensaje = false;
+        }, 3000);
+      }
+    },
+
     async guardarUsuario() {
+      this.cargando = true;
+      this.mostrarAlerta('Registrando usuario...', 'loading');
       try {
         if (this.usuario.id) {
           await axios.put(`http://localhost:5041/api/usuarios/${this.usuario.id}`, this.usuario)
@@ -73,30 +100,34 @@ export default {
             contraseña: this.usuario.contraseña
           })
         }
-        alert('✅ usuario creado');
+        this.mostrarAlerta('✅ Registro exitoso', 'success');
         this.usuario = { id: null, nombre: '', correo: '', telefono: '', direccion: '', contraseña: '' }
-        this.cargarUsuarios() 
+        this.cargarUsuarios()
       } catch (error) {
-        alert('error al registrar verifique los campos correctamente');
+        this.mostrarAlerta('❌ Error al registrar. Verifique los campos.', 'error');
         console.error('Error al guardar usuario:', error)
+      } finally {
+        this.cargando = false;
       }
     },
 
     editarUsuario(usuario) {
       this.usuario = { ...usuario }
     },
+
     async eliminarUsuario(id) {
       try {
         await axios.delete(`http://localhost:5041/api/usuarios/${id}`)
-        alert('🗑️ usuario eliminado.');
+        this.mostrarAlerta('🗑️ Usuario eliminado.', 'success');
         this.cargarUsuarios()
       } catch (error) {
+        this.mostrarAlerta('❌ Error al eliminar usuario.', 'error');
         console.error('Error al eliminar usuario:', error)
       }
     }
   },
   mounted() {
-    this.cargarUsuarios() // Seguimos cargando los usuarios al inicio
+    this.cargarUsuarios()
   }
 }
 </script>
@@ -157,9 +188,74 @@ export default {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.btn-submit:hover {
+.btn-submit:disabled {
+  background-color: #99caff;
+  cursor: not-allowed;
+}
+
+.btn-submit:hover:not(:disabled) {
   background-color: #0056b3;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.spinner-alert {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #004085;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.alerta {
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  animation: fadein 0.5s ease-in-out;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.loading {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 </style>

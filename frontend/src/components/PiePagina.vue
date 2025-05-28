@@ -62,66 +62,110 @@ export default {
 </script>
 
 <style scoped>
-.footer {
-  background-color: #000000;
+footer {
+  background: linear-gradient(to right, #000000, #111111);
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  margin-top: 40px;
 }
 
 
 .top-bar {
-  background-color: #574747;
+  background-color: rgba(87, 71, 71, 0.9);
   display: flex;
   justify-content: space-between;
-  padding: 10px 40px;
+  align-items: center;
+  padding: 12px 40px;
   font-size: 0.95em;
-
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .social-icons a {
-  margin-left: 15px;
-  color: #ff0202;
+  margin-left: 20px;
+  color: #ff4d4d;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: rgb(30, 255, 0);
+  color: #1abc9c;
+  transform: scale(1.2);
 }
 
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 3px 3px;
-  background-color: #000000;
+  padding: 30px 20px;
+  background-color: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-section {
   flex: 1;
-  margin: 10px 20px;
-  min-width: 200px;
+  margin: 15px 30px;
+  min-width: 220px;
 }
 
 .footer-section h3 {
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1abc9c;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #1abc9c;
+  padding-bottom: 6px;
 }
 
 .footer-section a {
+  display: block;
   text-decoration: none;
-  color: #ffffff;
+  color: #dddddd;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease, padding-left 0.2s ease;
 }
 
 .footer-section a:hover {
-  color: rgb(30, 255, 0);
+  color: #1abc9c;
+  padding-left: 8px;
 }
 
+
 .footer-bottom {
-  background-color: #000000;
+  background-color: #0a0a0a;
   text-align: center;
-  padding: 15px 0;
+  padding: 18px 0;
   font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #aaaaaa;
 }
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
 </style>

@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\Tienda-Tecnologica\\TiendaBackendApi\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
+              "RelativeToolTip": "TiendaBackendApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-27T18:03:36.566Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
