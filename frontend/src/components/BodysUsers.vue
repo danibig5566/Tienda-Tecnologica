@@ -6,7 +6,6 @@
       <span class="toggle-icon">{{ mainContentVisible ? '▼' : '►' }}</span>
     </div>
 
-
     <div v-if="mainContentVisible" class="content-wrapper">
       <form @submit.prevent="guardarUsuario" class="form">
         <div class="form-group">
@@ -28,14 +27,16 @@
           <label for="direccion">Dirección</label>
           <input v-model="usuario.direccion" type="text" id="direccion" placeholder="direccion" required />
         </div>
+
         <div class="form-group">
           <label for="contraseña">Contraseña</label>
           <input v-model="usuario.contraseña" type="password" id="contraseña" placeholder="contraseña" required />
         </div>
 
+
+
         <button type="submit" class="btn-submit">Guardar Usuario</button>
       </form>
-
 
       <div class="usuarios-seccion">
         <div class="usuarios-header" @click.stop="toggleUsuariosVisibles">
@@ -49,9 +50,11 @@
               <div>
                 <strong>{{ u.nombre }}</strong>
                 <span class="details">
-                  <p><strong>Telefono:</strong>{{ u.telefono }}</p>
-                  <p><strong>Direccion:</strong> {{ u.direccion }}</p>
-                  <p><strong>Correo:</strong>{{ u.correo }}</p>
+                  <p><strong>Teléfono:</strong> {{ u.telefono }}</p>
+                  <p><strong>Dirección:</strong> {{ u.direccion }}</p>
+                  <p><strong>Correo:</strong> {{ u.correo }}</p>
+                  <p><strong>Contraseña:</strong> {{ u.contraseña }}</p>
+                  <p><strong>Rol:</strong> {{ u.rol }}</p>
                 </span>
               </div>
               <div class="actions">
@@ -80,7 +83,8 @@ export default {
         correo: '',
         telefono: '',
         direccion: '',
-        contraseña: ''
+        contraseña: '',
+        rol: 'cliente'
       },
       mainContentVisible: true,
       usuariosVisibles: false
@@ -91,7 +95,6 @@ export default {
       this.mainContentVisible = !this.mainContentVisible
     },
     toggleUsuariosVisibles(event) {
-
       event.stopPropagation()
       this.usuariosVisibles = !this.usuariosVisibles
     },
@@ -109,16 +112,18 @@ export default {
           await axios.put(`http://localhost:5041/api/usuarios/${this.usuario.id}`, this.usuario)
           alert('✅ Usuario actualizado');
         } else {
-          await axios.post('http://localhost:5041/api/usuarios', {
-            nombre: this.usuario.nombre,
-            correo: this.usuario.correo,
-            telefono: this.usuario.telefono,
-            direccion: this.usuario.direccion,
-            contraseña: this.usuario.contraseña
-          })
+          await axios.post('http://localhost:5041/api/usuarios', this.usuario)
           alert('✅ Usuario creado');
         }
-        this.usuario = { id: null, nombre: '', correo: '', telefono: '', direccion: '', contraseña: '' }
+        this.usuario = {
+          id: null,
+          nombre: '',
+          correo: '',
+          telefono: '',
+          direccion: '',
+          contraseña: '',
+          rol: 'cliente'
+        }
         this.cargarUsuarios()
       } catch (error) {
         alert('Error al registrar, verifique los campos correctamente');
@@ -126,9 +131,7 @@ export default {
       }
     },
     editarUsuario(usuario) {
-
       this.usuario = { ...usuario }
-
       if (!this.usuariosVisibles) {
         this.usuariosVisibles = true;
       }
@@ -203,7 +206,8 @@ export default {
   color: #555;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   padding: 0.75rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -211,7 +215,8 @@ export default {
   transition: border-color 0.3s;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   border-color: #007bff;
   outline: none;
 }
@@ -230,7 +235,6 @@ export default {
 .btn-submit:hover {
   background-color: #0056b3;
 }
-
 
 .usuarios-seccion {
   margin-top: 2rem;

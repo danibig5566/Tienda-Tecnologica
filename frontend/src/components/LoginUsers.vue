@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <!-- ALERTA DINÁMICA -->
+   
     <div v-if="mostrarMensaje" :class="['alerta', tipoMensaje]">
       <span v-if="tipoMensaje === 'loading'" class="spinner-alert"></span>
       {{ mensaje }}
@@ -38,8 +38,11 @@
         <span v-if="cargando" class="spinner"></span>
         <span v-else>Registrar</span>
       </button>
+      <button class="btn-submit" style="background-color: grey;" @click="$emit('cerrar')">Cancelar</button>
+
     </form>
   </div>
+
 </template>
 
 <script>

@@ -2,7 +2,7 @@
   <footer class="footer">
 
     <div class="top-bar">
-      <span>Conéctate con nosotros en las redes sociales:</span>
+      <span>conectense a nuestras redes sociales:</span>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -36,8 +36,8 @@
 
       <div class="footer-section">
         <h3>ENLACES UTILES</h3>
-        <p><a href="#">PQR</a></p>
-        <p><a href="#">Contactame</a></p>
+        <p><RouterLink to="/VistaPqr">PQR</RouterLink></p>
+        <p><router-link to="/VistaContactanos">contactanos</router-link></p>
         <p><a href="#">Sobre Nosotros</a></p>
       </div>
 
@@ -56,6 +56,8 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
   name: 'PiePagina',
 }

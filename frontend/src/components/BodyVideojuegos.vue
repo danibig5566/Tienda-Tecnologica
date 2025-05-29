@@ -8,7 +8,7 @@ data() {
         };
     },
     mounted() {
-        this.cargarProductosPorCategoria(3);
+        this.cargarProductosPorCategoria(5);
     },
     methods: {
         async cargarProductosPorCategoria(idCategoria) {

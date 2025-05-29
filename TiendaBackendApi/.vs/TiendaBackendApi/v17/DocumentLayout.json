@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\models\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\models\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\tiendabackendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\tiendabackendapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TiendaBackendApi\\TiendaBackendApi.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|c:\\users\\acer\\tienda-tecnologica\\tiendabackendapi\\tiendabackendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3642DAFC-F44F-40F6-952C-EDFD95BDAF19}|TiendaBackendApi\\TiendaBackendApi.csproj|solutionrelative:tiendabackendapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -14,11 +58,153 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Models\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\ProductDTO.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Models\\ProductDTO.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T08:29:13.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T08:07:34.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T08:04:46.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Models\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\LoginDTO.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Models\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T07:49:33.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\Usuario.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Models\\Usuario.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T07:44:42.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T07:41:21.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Models\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Models\\UsuarioDTO.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Models\\UsuarioDTO.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T07:45:04.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "TiendaBackendApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T07:41:21.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\WeatherForecast.cs",
+              "RelativeToolTip": "TiendaBackendApi\\WeatherForecast.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:15:25.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TiendaBackendApi.http",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.http",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\TiendaBackendApi.http",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.http",
+              "RelativeToolTip": "TiendaBackendApi\\TiendaBackendApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-05-27T18:15:23.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TiendaBackendApi.csproj.user",
+              "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj.user",
+              "RelativeDocumentMoniker": "TiendaBackendApi\\TiendaBackendApi.csproj.user",
+              "ToolTip": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\TiendaBackendApi.csproj.user",
+              "RelativeToolTip": "TiendaBackendApi\\TiendaBackendApi.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-05-27T18:15:23.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ACER\\Tienda-Tecnologica\\TiendaBackendApi\\TiendaBackendApi\\appsettings.json",
               "RelativeDocumentMoniker": "TiendaBackendApi\\appsettings.json",
@@ -26,8 +212,7 @@
               "RelativeToolTip": "TiendaBackendApi\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-27T18:03:36.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T18:03:36.566Z"
             }
           ]
         }

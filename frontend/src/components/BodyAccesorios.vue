@@ -28,7 +28,7 @@
       };
     },
     mounted() {
-      this.cargarProductosPorCategoria(5);
+      this.cargarProductosPorCategoria(2);
     },
     methods: {
       async cargarProductosPorCategoria(idCategoria) {

@@ -1,19 +1,21 @@
 <script>
+import BodyContactame from '../components/BodyContactame.vue';
 import Encabezado from '../components/Encabezado.vue';
-import BodyPQRs from '../components/BodyPQRs.vue';
 import PiePagina from '../components/PiePagina.vue';
+
 export default{
-name:'VistaPqr',
+name:'VistaContactanos',
 components:{
-    Encabezado,BodyPQRs,PiePagina
+    Encabezado,PiePagina,BodyContactame
 }
 }
 </script>
 
 <template>
 <Encabezado></Encabezado>
-<BodyPQRs></BodyPQRs>
+<BodyContactame></BodyContactame>
 <PiePagina></PiePagina>
+
 </template>
 
 <style scoped>

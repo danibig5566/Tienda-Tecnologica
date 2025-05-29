@@ -6,6 +6,11 @@ export default {
       usuario: JSON.parse(localStorage.getItem('usuario') || 'null')
     };
   },
+  computed: {
+    esAdmin() {
+      return this.usuario && (this.usuario.rol === 'admin' || this.usuario.rol === 'administrador');
+    }
+  },
   methods: {
     cerrarSesion() {
       localStorage.removeItem('usuario');
@@ -22,10 +27,11 @@ export default {
     <nav class="menu">
       <ul class="nav-list">
         <li>
-          <router-link to="/" title="Inicio">
+          <router-link to="/Inicio" title="Inicio">
             <i class="fas fa-house"></i>
           </router-link>
         </li>
+
         <li class="item">
           <i class="fa-sharp fa-solid fa-bars" style="margin-right: 5px;"></i> 
           <ul class="sub-item">
@@ -36,28 +42,28 @@ export default {
             <li><router-link to="/VistaAccesorios">Accesorios</router-link></li>
           </ul>
         </li>
+
         <li>
-          <router-link to="/contacto" title="Contactenos">
+          <router-link to="/VistaContactanos" title="contactanos">
             <i class="fas fa-envelope"></i>
           </router-link>
         </li>
+
         <li>
-          <router-link to="/pqr" title="Reclamos">
+          <router-link to="/VistaPqr" title="Reclamos">
             <i class="fas fa-question-circle"></i>
           </router-link>
         </li>
+
         <li>
           <router-link to="/VistaCarrito" title="Carrito">
             <i class="fas fa-shopping-cart"></i>
           </router-link>
         </li>
-        <li>
-          <router-link to="/AgregarProductos" title="Admin">
-            <i class="fas fa-user-cog"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="/VistaUsers" title="USERS">
+
+        
+        <li v-if="esAdmin">
+          <router-link to="/AgregarProductos" title="Admin">  
             <i class="fas fa-user-cog"></i>
           </router-link>
         </li>
@@ -79,6 +85,7 @@ export default {
 </template>
 
 <style scoped>
+
 header {
   background: rgba(17, 17, 17, 0.9);
   backdrop-filter: blur(8px);
@@ -247,5 +254,4 @@ header {
     color: #fff;
   }
 }
-
 </style>

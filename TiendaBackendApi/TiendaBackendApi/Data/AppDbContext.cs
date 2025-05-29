@@ -10,6 +10,7 @@ namespace TiendaBackendApi.Data
         public DbSet<Product> Productos { get; set; }
         public DbSet<Categorias> Categorias { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+       
 
 
 

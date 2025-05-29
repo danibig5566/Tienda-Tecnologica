@@ -28,7 +28,7 @@ export default {
     };
   },
   mounted() {
-    this.cargarProductosPorCategoria(2);
+    this.cargarProductosPorCategoria(1);
   },
   methods: {
     async cargarProductosPorCategoria(idCategoria) {

@@ -4,6 +4,7 @@ using TiendaBackendApi.Data;
 using AutoMapper;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using TiendaBackendApi.Models;
 namespace TiendaBackendApi.Controllers
 {
     [Route("api/[controller]")]
@@ -37,6 +38,23 @@ namespace TiendaBackendApi.Controllers
 
             return Ok(usuario);
         }
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDTO loginDto)
+        {
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Correo == loginDto.Correo && u.Contraseña == loginDto.Contraseña);
+
+            if (usuario == null)
+                return Unauthorized("Credenciales incorrectas");
+
+            return Ok(new
+            {
+                Id = usuario.Id,
+                Nombre = usuario.Nombre,
+                Rol = usuario.Rol
+            });
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<Usuario>> CrearUsuario([FromBody] UsuarioDTO dto)
@@ -50,7 +68,8 @@ namespace TiendaBackendApi.Controllers
                 Correo = dto.Correo,
                 Telefono = dto.Telefono,
                 Direccion = dto.Direccion,
-                Contraseña = dto.Contraseña
+                Contraseña = dto.Contraseña,
+                 Rol = dto.Rol
             };
 
             _context.Usuarios.Add(usuario);

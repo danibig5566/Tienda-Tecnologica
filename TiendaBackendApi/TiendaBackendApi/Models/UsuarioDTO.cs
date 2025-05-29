@@ -28,6 +28,8 @@ using System.ComponentModel.DataAnnotations.Schema;
     [Required(ErrorMessage = "La contraseña es obligatoria.")]
     [StringLength(100, MinimumLength = 6, ErrorMessage = "La contraseña debe tener al menos 6 caracteres.")]
     public string Contraseña { get; set; }
+    [Required]
+    public string Rol { get; set; } = "cliente";
 
 
 }
