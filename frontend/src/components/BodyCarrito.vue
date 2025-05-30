@@ -1,11 +1,6 @@
 <template>
   <div class="carrito-container">
     <h1 class="titulo">🛒 Carrito de Compras</h1>
-    <!-- Mostrar usuario logueado y botón de cerrar sesión -->
-<div v-if="usuario" class="usuario-sesion">
-  <p>👤 Sesión iniciada como: <strong>{{ usuario.nombre }}</strong></p>
-  <button class="btn btn-logout" @click="cerrarSesion">Cerrar sesión</button>
-</div>
 
     <div v-if="carrito.length > 0">
       <form class="formulario-carrito">
@@ -41,7 +36,6 @@
       <p>Tu carrito está vacío.</p>
     </div>
 
-    <!-- MODAL DE LOGIN -->
     <div v-if="showLoginModal" class="modal-overlay">
       <div class="modal">
         <h3>Iniciar Sesión</h3>
@@ -49,6 +43,15 @@
         <input v-model="contrasena" type="password" placeholder="Contraseña" />
         <button @click="login">Iniciar sesión</button>
         <button @click="showLoginModal = false">Cancelar</button>
+      </div>
+    </div>
+
+    <div v-if="mensajeCompra" class="modal-overlay">
+      <div class="modal exito-compra">
+        <div class="check-icon">✔️</div>
+        <h3>¡Gracias por tu compra, {{ usuario.nombre }}!</h3>
+        <p>Total pagado: ${{ total }}</p>
+        <button @click="mensajeCompra = false">Cerrar</button>
       </div>
     </div>
   </div>
@@ -59,69 +62,89 @@ import axios from 'axios';
 
 export default {
   name: 'BodyCarrito',
- data() {
-  return {
-    carrito: JSON.parse(localStorage.getItem('carrito') || '[]'),
-    showLoginModal: false,
-    nombreUsuario: '',
-    contrasena: '',
-    usuario: JSON.parse(localStorage.getItem('usuario') || 'null')
-  };
-},
-methods: {
-  guardarCarrito() {
-    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+  data() {
+    return {
+      carrito: JSON.parse(localStorage.getItem('carrito') || '[]'),
+      showLoginModal: false,
+      mensajeCompra: false,
+      nombreUsuario: '',
+      contrasena: '',
+      usuario: JSON.parse(localStorage.getItem('usuario') || 'null')
+    };
   },
-  vaciarCarrito() {
-    localStorage.removeItem('carrito');
-    this.carrito = [];
-  },
-  async comprar() {
-    if (!this.usuario) {
-      this.showLoginModal = true;
-    } else {
-      alert('¡Gracias por tu compra!');
-      this.vaciarCarrito();
+  computed: {
+    total() {
+      return this.carrito
+        .reduce((sum, item) => sum + item.precio * item.cantidad, 0)
+        .toFixed(2);
     }
   },
-  async login() {
-    if (this.usuario) {
-      alert("Ya hay una sesión activa.");
-      return;
-    }
-
-    try {
-      const response = await axios.get('http://localhost:5041/api/usuarios');
-      const usuarios = response.data;
-
-      const usuarioEncontrado = usuarios.find(user =>
-        user.nombre === this.nombreUsuario &&
-        user.contraseña === this.contrasena
-      );
-
-      if (usuarioEncontrado) {
-        localStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
-        this.usuario = usuarioEncontrado;
-        this.showLoginModal = false;
-        alert("Autenticación exitosa. Continuando con la compra...");
-        this.comprar();
+  methods: {
+    guardarCarrito() {
+      localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    },
+    vaciarCarrito() {
+      localStorage.removeItem('carrito');
+      this.carrito = [];
+    },
+    async comprar() {
+      if (!this.usuario) {
+        this.showLoginModal = true;
       } else {
-        alert("Credenciales incorrectas.");
+        const resumenCompra = {
+          usuario: this.usuario.nombre,
+          productos: this.carrito.map(item => ({
+            id: item.id,
+            nombre: item.nombre,
+            cantidad: item.cantidad,
+            precio: item.precio,
+            subtotal: (item.precio * item.cantidad).toFixed(2)
+          })),
+          total: this.total
+        };
+        console.log('🧾 Resumen de la compra:', resumenCompra);
+        this.mensajeCompra = true;
+        this.vaciarCarrito();
       }
-    } catch (error) {
-      console.error("Error al autenticar:", error);
-      alert("Error al conectar con el servidor.");
-    }
-  },
-  cerrarSesion() {
-    localStorage.removeItem('usuario');
-    this.usuario = null;
-    alert("Sesión cerrada correctamente.");
-  }
-}
+    },
+    async login() {
+      if (this.usuario) {
+        alert("Ya hay una sesión activa.");
+        return;
+      }
 
+      try {
+        const response = await axios.get('http://localhost:5041/api/usuarios');
+        const usuarios = response.data;
+
+        const usuarioEncontrado = usuarios.find(
+          user =>
+            user.nombre === this.nombreUsuario &&
+            user.contraseña === this.contrasena
+        );
+
+        if (usuarioEncontrado) {
+          localStorage.setItem('usuario', JSON.stringify(usuarioEncontrado));
+          this.usuario = usuarioEncontrado;
+          this.showLoginModal = false;
+          this.comprar();
+        } else {
+          alert("Credenciales incorrectas.");
+        }
+      } catch (error) {
+        console.error("Error al autenticar:", error);
+        alert("Error al conectar con el servidor.");
+      }
+    },
+    cerrarSesion() {
+      localStorage.removeItem('usuario');
+      this.usuario = null;
+      alert("Sesión cerrada correctamente.");
+    }
+  }
 };
 </script>
+
 <style scoped>
 .carrito-container {
   max-width: 900px;
@@ -278,7 +301,6 @@ methods: {
   color: #888;
 }
 
-/* Modal Estilos */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -343,4 +365,27 @@ methods: {
   background-color: #95a5a6;
 }
 
+.exito-compra {
+  text-align: center;
+  padding: 40px;
+  max-width: 400px;
+}
+
+.check-icon {
+  font-size: 3rem;
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.exito-compra h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.exito-compra p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
 </style>

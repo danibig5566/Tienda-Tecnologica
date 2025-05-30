@@ -216,8 +216,46 @@ header {
 .logout-button:hover {
   background: linear-gradient(135deg, #c0392b, #96281b);
 }
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
 
-/* Responsive Design */
+  .logout-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-list a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .nav-list i {
+    font-size: 1rem;
+  }
+
+  .sub-item li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logout-button {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+}
+
+
 @media (max-width: 768px) {
   .nav-list {
     flex-direction: column;

@@ -10,6 +10,7 @@ import VistaAccesorios from '../views/VistaAccesorios.vue'
 import VistaLogin from '../views/VistaLogin.vue'
 import VistaContactanos from '../views/VistaContactanos.vue'
 import VistaPqr from '../views/VistaPqr.vue'
+import VistasobreNosotros from '../views/VistasobreNosotros.vue'
 
 const routes = [
   { path: '/', name: 'VistaLogin', component: VistaLogin },
@@ -23,6 +24,7 @@ const routes = [
   { path: '/VistaAccesorios', name: 'VistaAccesorios', component: VistaAccesorios },
   {path: '/VistaContactanos',name: 'VistaContactanos', component: VistaContactanos},
   {path:'/VistaPqr',name: 'VistaPqr',component: VistaPqr},
+  {path:'/VistasobreNosotros',name:'VistaSobreNosotros',component:VistasobreNosotros},
   
 ]
 

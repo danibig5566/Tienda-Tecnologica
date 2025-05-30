@@ -27,13 +27,7 @@
           <span v-else">Iniciar sesión</span>
         </button>
         
-        <button 
-          class="btn-secundario" 
-          @click="continuarSinSesion"
-          :disabled="cargando"
-        >
-          Ingresar como invitado
-        </button>
+    
         
         <button 
           class="btn-registro" 
@@ -49,7 +43,7 @@
       </div>
     </div>
 
-    <!-- Modal de registro -->
+    
     <div v-if="mostrarModalRegistro" class="modal-overlay" @click.self="cerrarModal">
       <div class="modal">
         <div class="modal-header">
@@ -109,13 +103,13 @@ export default {
 
         const usuario = response.data;
 
-        // Guardar el usuario logueado en el estado global de la aplicación
+        
         this.guardarUsuario(usuario);
 
         this.mostrarMensaje('✅ Inicio de sesión exitoso', 'success');
 
         setTimeout(() => {
-          // Redirigir según el rol
+          
           if (usuario.rol === 'admin' || usuario.rol === 'administrador') {
             this.$router.push('/Inicio');
           } else {
@@ -151,7 +145,7 @@ export default {
     },
 
     continuarSinSesion() {
-      // Establecer usuario como invitado
+    
       const usuarioInvitado = {
         id: null,
         nombre: 'Invitado',
@@ -163,15 +157,15 @@ export default {
     },
 
     guardarUsuario(usuario) {
-      // Guardar en el estado global de Vuex si lo usas
+      
       if (this.$store) {
         this.$store.commit('setUsuario', usuario);
       }
       
-      // Guardar en localStorage como respaldo
+     
       localStorage.setItem('usuario', JSON.stringify(usuario));
       
-      // Emitir evento global para que otros componentes puedan reaccionar
+      
       this.$root.$emit('usuario-cambio', usuario);
     },
 
@@ -188,7 +182,7 @@ export default {
       this.mensaje = texto;
       this.tipoMensaje = tipo;
       
-      // Limpiar mensaje después de 5 segundos
+      
       setTimeout(() => {
         this.mensaje = '';
         this.tipoMensaje = '';
@@ -204,17 +198,17 @@ export default {
   },
 
   mounted() {
-    // Verificar si ya hay un usuario logueado
+   
     const usuarioGuardado = localStorage.getItem('usuario');
     if (usuarioGuardado) {
       try {
         const usuario = JSON.parse(usuarioGuardado);
-        // Actualizar el estado global con el usuario guardado
+       
         if (this.$store) {
           this.$store.commit('setUsuario', usuario);
         }
         
-        // Redirigir según el rol
+       
         if (usuario.rol === 'admin' || usuario.rol === 'administrador') {
           this.$router.push('/Inicio');
         } else {

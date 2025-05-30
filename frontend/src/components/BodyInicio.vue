@@ -1,19 +1,33 @@
-<template>
-  <div class="container">
-    <div v-for="(productos, categoriaNombre) in productosPorCategoria" :key="categoriaNombre">
-      <h2 class="categoria-titulo">{{ categoriaNombre }}</h2>
-      <div class="grid">
-        <div class="card" v-for="producto in productos" :key="producto.id">
-          <img :src="producto.imagenUrl" :alt="producto.nombre" />
-          <div class="card-body">
-            <h2 class="card-title">{{ producto.nombre }}</h2>
-            <p class="card-description">{{ producto.descripcion }}</p>
-            <p class="card-price">$ {{ producto.precio.toLocaleString() }}</p>
-            <span class="card-category">{{ producto.categorias?.nombre || 'Sin categoría' }}</span>
-            <button class="card-button" @click="accionProducto(producto)">
-              Agregar al carrito
-            </button>
+<template> 
+  <div>
+    <div class="container">
+      <div v-for="(productos, categoriaNombre) in productosPorCategoria" :key="categoriaNombre">
+        <h2 class="categoria-titulo">{{ categoriaNombre }}</h2>
+        <div class="grid">
+          <div class="card" v-for="producto in productos" :key="producto.id">
+            <img :src="producto.imagenUrl" :alt="producto.nombre" />
+            <div class="card-body">
+              <h2 class="card-title">{{ producto.nombre }}</h2>
+              <p class="card-description">{{ producto.descripcion }}</p>
+              <p class="card-price">$ {{ producto.precio.toLocaleString() }}</p>
+              <span class="card-category">{{ producto.categorias?.nombre || 'Sin categoría' }}</span>
+              <button class="card-button" @click="accionProducto(producto)">
+                Agregar al carrito
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-carousel-wrapper">
+      <div class="icon-carousel" ref="carousel">
+        <div 
+          v-for="(icon, index) in iconos" 
+          :key="index" 
+          class="icon-item"
+        >
+          <img :src="icon" alt="icon" />
         </div>
       </div>
     </div>
@@ -28,10 +42,25 @@ export default {
   data() {
     return {
       productosPorCategoria: {},
+      iconos: [
+        '/icons8-apple-logo-90.png',
+        '/icons8-asus-90.png',
+        '/icons8-epson-80.png',
+        '/icons8-hp-50.png',
+        '/icons8-microsoft-90.png',
+        '/icons8-nintendo-switch-80.png',
+        '/icons8-samsung-90.png',
+        '/icons8-xbox-90.png'
+      ],
+      slideInterval: null,
     };
   },
   async mounted() {
     await this.cargarProductosAgrupados();
+    this.iniciarCarrusel();
+  },
+  beforeDestroy() {
+    clearInterval(this.slideInterval);
   },
   methods: {
     async cargarProductosAgrupados() {
@@ -69,6 +98,17 @@ export default {
       carrito.push(producto);
       localStorage.setItem('carrito', JSON.stringify(carrito));
       alert(`${producto.nombre} agregado al carrito.`);
+    },
+    iniciarCarrusel() {
+      const carousel = this.$refs.carousel;
+      const totalItems = this.iconos.length;
+      let currentIndex = 0;
+
+      this.slideInterval = setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= totalItems) currentIndex = 0;
+        carousel.style.transform = `translateX(-${currentIndex * 110}px)`;
+      }, 2500);
     }
   }
 };
@@ -136,5 +176,27 @@ export default {
 }
 .card-button:hover {
   background: #218838;
+}
+.icon-carousel-wrapper {
+  overflow: hidden;
+  width: 580px;
+  margin: 40px auto 0;
+}
+.icon-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.icon-item {
+  flex: 0 0 100px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  user-select: none;
 }
 </style>

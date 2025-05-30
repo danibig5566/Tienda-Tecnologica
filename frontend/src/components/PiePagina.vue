@@ -9,7 +9,7 @@
         <a href="#"><i class="fab fa-google"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/danibig5566/Tienda-Tecnologica.git"><i class="fab fa-github"></i></a>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
         <h3>ENLACES UTILES</h3>
         <p><RouterLink to="/VistaPqr">PQR</RouterLink></p>
         <p><router-link to="/VistaContactanos">contactanos</router-link></p>
-        <p><a href="#">Sobre Nosotros</a></p>
+        <p><router-link to="/VistasobreNosotros">sobre nostros</router-link></p>
       </div>
 
       <div class="footer-section">
